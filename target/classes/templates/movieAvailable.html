@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{abstractCinema.title}">t</title>
+</head>
+<body>
+    <h1 th:text="#{abstractCinema.movieAvailable}">h</h1>
+    <table>
+        <tr>
+            <th>MovieId</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>TicketCost</th>
+        </tr>
+        <tr th:each="ma : ${movieAvailable}">
+            <td th:text="${ma.movieId.movieAvailableId.getId()}">1</td>
+            <td th:text="${ma.startDate}">2000.01.01</td>
+            <td th:text="${ma.endDate}">2001.10.10</td>
+            <td th:text="${ma.ticketCost}">20.0</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

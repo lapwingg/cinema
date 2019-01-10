@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Abstract Cinema</title>
+</head>
+<body>
+    <h1>Directors List</h1>
+    <table>
+        <tr>
+            <th>DirectorsOfMovieId</th>
+            <th>MovieGeneralInfoId</th>
+        </tr>
+        <tr th:each="md: ${movieDirectors}">
+            <td th:text="${md.movieDirectorsId.directorsOfMovie.id}">1</td>
+            <td th:text="${md.movieDirectorsId.movieGeneralInfoId.id}">1</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

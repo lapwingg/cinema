@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{abstractCinema.title}">t</title>
+</head>
+<body>
+    <h1 th:text="#{abstractCinema.cinemaRooms}">h</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>RoomName</th>
+            <th>Capacity</th>
+        </tr>
+        <tr th:each="cinemaRoom : ${cinemaRooms}">
+            <td th:text="${cinemaRoom.id}">1</td>
+            <td th:text="${cinemaRoom.roomName}">R</td>
+            <td th:text="${cinemaRoom.capacity}">1</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

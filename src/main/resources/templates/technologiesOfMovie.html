@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Abstract Cinema</title>
+</head>
+<body>
+    <h1>Technologies Of Movie List</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>TechnologyName</th>
+        </tr>
+        <tr th:each="tm: ${technologiesOfMovie}">
+            <td th:text="${tm.id}">1</td>
+            <td th:text="${tm.technologyName}">2d</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

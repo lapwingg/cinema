@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{abstractCinema.title}">t</title>
+</head>
+<body>
+    <!--&lt;!&ndash;<div>&ndash;&gt;-->
+        <!--<h1>Add new elem</h1>-->
+        <!--<form action="#" th:object="${cinemaRooms}" method="post">-->
+            <!--<p>Id: <input type="text" th:field="*{id}" /></p>-->
+            <!--<p>RoomName: <input type="text" th:field="*{roomName}" /></p>-->
+            <!--<p>Capacity: <input type="text" th:field="*{capacity}" /></p>-->
+            <!--<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>-->
+        <!--</form>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--<div>-->
+        <h1 th:text="#{abstractCinema.cinemaRooms}">h</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>RoomName</th>
+                <th>Capacity</th>
+            </tr>
+            <tr th:each="cinemaRoom : ${cinemaRooms}">
+                <td th:text="${cinemaRoom.id}">1</td>
+                <td th:text="${cinemaRoom.roomName}">R</td>
+                <td th:text="${cinemaRoom.capacity}">1</td>
+            </tr>
+        </table>
+    <!--</div>-->
+
+    <a href="/">Back</a>
+</body>
+</html>

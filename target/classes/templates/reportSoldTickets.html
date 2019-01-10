@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{abstractCinema.title}">t</title>
+</head>
+<body>
+    <h1 th:text="#{abstractCinema.reportSoldTickets}">h</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>CinemaSchedulerId</th>
+            <th>ClientId</th>
+            <th>TicketCost</th>
+        </tr>
+        <tr th:each="rst: ${reportSoldTickets}">
+            <td th:text="${rst.id}">1</td>
+            <td th:text="${rst.cinemaSchedulerId.id}">1</td>
+            <td th:text="${rst.clientId.id}">1</td>
+            <td th:text="${rst.ticketCost}">20.0</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{abstractCinema.title}">t</title>
+</head>
+<body>
+    <h1 th:text="#{abstractCinema.movieGeneralInfo}">h</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>ProductionYear</th>
+            <th>LengthMinutes</th>
+            <th>Description</th>
+            <th>AgeLimitAbove</th>
+        </tr>
+        <tr th:each="mgi: ${movieGeneralInfo}">
+            <td th:text="${mgi.id}">1</td>
+            <td th:text="${mgi.title}">S</td>
+            <td th:text="${mgi.productionYear}">2010</td>
+            <td th:text="${mgi.description}">E</td>
+            <td th:text="${mgi.ageLimitAbove}">20</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

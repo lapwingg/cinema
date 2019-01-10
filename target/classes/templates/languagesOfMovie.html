@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{abstractCinema.title}">t</title>
+</head>
+<body>
+    <h1 th:text="#{abstractCinema.languageOfMovie}">h</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>LanguageName</th>
+        </tr>
+        <tr th:each="lm : ${languagesOfMovie}">
+            <td th:text="${lm.id}">1</td>
+            <td th:text="${lm.languageName}">R</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>

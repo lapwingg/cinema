@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Abstract Cinema</title>
+</head>
+<body>
+    <h1>Client List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>ClientName</th>
+            <th>ClientSurname</th>
+        </tr>
+        <tr th:each="c : ${client}">
+            <td th:text="${c.id}">1</td>
+            <td th:text="${c.clientName}">R</td>
+            <td th:text="${c.clientSurname}">1</td>
+        </tr>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>
